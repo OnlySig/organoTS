@@ -1,11 +1,10 @@
-import { IColaborador } from '../../shared/interfaces/Icolaborador'
+import { IColaborador } from '../../shared/interfaces/IColaborador'
 import './Colaborador.css'
 
 interface ColaboradorProps {
     colaborador: IColaborador,
     corDeFundo: string
 }
-
 const Colaborador = ({ colaborador, corDeFundo } :ColaboradorProps) => {
     return (<div className='colaborador'>
         <div className='cabecalho' style={{ backgroundColor: corDeFundo }}>
@@ -14,6 +13,7 @@ const Colaborador = ({ colaborador, corDeFundo } :ColaboradorProps) => {
         <div className='rodape'>
             <h4>{colaborador.nome}</h4>
             <h5>{colaborador.cargo}</h5>
+            <h5>Data do Registro: {colaborador.data}</h5>
         </div>
     </div>)
 }

@@ -1,4 +1,4 @@
-import { IColaborador } from '../../shared/interfaces/Icolaborador'
+import { IColaborador } from '../../shared/interfaces/IColaborador'
 import Colaborador from '../Colaborador'
 import './Time.css'
 
@@ -20,7 +20,7 @@ const Time = ({ colaboradores, corPrimaria, corSecundaria, nome }: TimeProps) =>
                     .map(colaborador => <Colaborador corDeFundo={corPrimaria} key={colaborador.nome} colaborador={colaborador}/>)}
             </div>
         </section> 
-        : ''
+        : <></>
     )
 }
 
